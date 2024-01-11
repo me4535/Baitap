@@ -77,3 +77,49 @@ c=float(input('centimeters: '))
 print('kilometers=',c/100000)
 print('meters=',c/100)
 ''' bài 16'''
+#triangle
+a=float(input('a: '))
+b=float(input('b: '))
+c=float(input('c: '))
+print('perimeter=',a+b+c)
+p=(a+b+c)/2
+print('area of triangle=',(p*(p-a)*(p-b)*(p-c))**0.5)
+#square
+a=float(input('a: '))
+print('perimeter=',a*4)
+print('area of square=',a*a)
+#rectangle
+a=float(input('a: '))
+b=float(input('b: '))
+print('perimeter=',(a+b)*2)
+print('area of rectangle=',a*b)
+#circle
+r=float(input('radius: '))
+print('perimeter=',2*r*3.14)
+print('area of circle=',r*r*3.14)
+''' bài 17'''
+a=int(input('a: '))
+b=int(input('b: '))
+if a>b:
+    print(a, 'is the maximun vaule')
+else: 
+    print(b, 'is the maximun vaule')
+''' bài 19'''
+# program to detect positeve, negative or zero num 
+a=float(input('a: '))
+if a>0:
+    print('positive')
+elif a<0:
+    print('negative')
+else:
+    print('zero')
+''' bài 20'''
+# program to detect even or odd num
+a=int(input('a: '))
+if a%2==0:
+    print('even')
+else:
+    print('odd')
+''' bài 21'''
+
+
