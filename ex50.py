@@ -121,5 +121,88 @@ if a%2==0:
 else:
     print('odd')
 ''' bài 21'''
-
+print('input three numbers: \n')
+a=float(input('a: '))
+b=float(input('b: '))
+c=float(input('c: '))
+if a<b and b<c :
+    print(a ,b, c)
+elif a<c and c<b:
+    print(a, c, b)
+elif b<a and a<c:
+    print(b, a, c)
+elif b<c and c<a:
+    print(b, c, a)
+elif c<a and a<b:
+    print(c, a, b)
+else:
+    print(c, b, a)
+''' bài 22'''
+# program to find lagrest use conditional operator
+a=float(input('a: '))
+b=float(input('b: '))
+c=float(input('c: '))
+max=a if a>b and a>c else b if b>c else c
+print(max)
+''' bài 24'''
+print('linear equation: ax+b=0 solver : \n')
+print('input a and b: \n')
+a=float(input('a: '))
+b=float(input('b: '))
+if a==0 and  b==0:
+        print('infinity solution')
+else:
+        print('x: ', -b/a)
+''' bài 23'''
+yr=int(input('year: '))
+if yr%4==0 and yr%100!=0 or yr%400==0:
+    print(yr,'is a leap year')
+''' bài 25'''
+#Write a program to solve quadratic equation : ax2 + bx + c = 0
+print('quadratic equation: ax2 + bx + c = 0 solver : \n')
+print('input a, b and c: \n')
+a=float(input('a: '))
+b=float(input('b: '))
+c=float(input('c: '))
+if a==0 and b==0 and c==0:
+    print('infinity solution')
+elif a==0 and b==0:
+    print('no solution')
+elif a==0:
+    print('x: ', -c/b)
+else:
+    delta=b*b-4*a*c
+    if delta<0:
+        print('no solution')
+    elif delta==0:
+        print('x: ', -b/(2*a))
+    else:
+        print('x1: ', (-b+delta**0.5)/(2*a))
+        print('x2: ', (-b-delta**0.5)/(2*a))
+''' bài 26'''
+print('temperature reader: \n')
+print('input temperature: \n')
+t=float(input('temperature: '))
+if t<0:
+    print('Freezing weather')
+elif t>=0 and t<10:
+    print('Very Cold weather')
+elif t>=10 and t<20:
+    print('Cold weather')
+elif t>=20 and t<30:
+    print('Normal in Temp')
+elif t>=30 and t<40:
+    print('Its Hot')
+elif t>=40:
+    print('Its Very Hot')
+''' bài 27'''
+num = input('three digts Num : ')
+digit = [int(digits) for digits in num]
+for i in range(len(digit)):
+    for j in range(len(digit)-i-1):
+        if digit[j] > digit[j+1]:
+            digit[j], digit[j+1] = digit[j+1], digit[j]
+print(digit)
+# sắp xếp tăng dần theo thuật toán bubble sort
+''' bài 28'''
 
