@@ -239,9 +239,178 @@ def bai28():
         print(day_name)
     else:
         print("Số nguyên phải nằm trong khoảng từ 2 đến 8.")
-print('bài tập đã làm 1-28')
+''' bài 29'''
+def bai29():
+    n=int(input('n: '))
+    giaithua=1
+    for i in range(1,n+1):
+        giaithua=giaithua*i
+    print('n!=',giaithua)
+''' bài 30'''
+def bai30():
+    n=int(input('n: '))
+    i = 1
+    sn= 0
+    while i <= (2*n+1):
+        sn= sn+i
+        i=i+2
+    print('S=',sn)
+''' bài 31'''
+def bai31():
+    n = int(input('n: '))
+    i = 1
+    p = 1
+    while i <= (2*n+1):
+        p= p*i
+        i=i+2
+    print('P= ',p)
+''' bài 32'''
+def bai32():
+    n = int(input('n: '))
+    i=1
+    P = 1
+    s = 0
+    while i <= n : 
+        P = P*i
+        s=s+P
+        i=i+1
+    print('S= ',s)
+''' bài 33'''
+def bai33():
+    n = int(input('n: '))
+    i = 0
+    sodd=0
+    seven=0
+    while i < n:
+        i = i+1
+        if i %2 ==0 :
+            sodd = sodd + i
+        elif i %2 !=0 :
+            seven = seven + i
+        sn = seven-sodd
+    print(sn)
+''' bài 34 '''
+def bai34():
+    n = int(input('n: '))
+    i = 1
+    s = 1
+    while i < n:
+        i+=1
+        s =s +(1/i)
+    print(s)
+''' bài 35'''
+def bai35():
+    n = int(input('n: '))
+    i=1
+    coutn=1
+    while i<n:
+        i+=1
+        if n%i==0:
+            coutn=coutn+1
+    print(coutn)
+''' bài 36'''
+def bai36():
+    a = int(input('a: '))
+    b = int(input('b: '))
+    if a > b:
+        min = b
+    else:
+        min = a
+    for i in range(1,min+1):
+        if a%i==0 and b%i==0:
+            gcd=i
+    print('gcd: ',gcd)
+    lcm=(a*b)/gcd
+    print('lcm: ',lcm)
+''' bài 37'''
+def bai37():
+    n = int(input('n: '))
+    if n > 1:
+        for i in range(2,n):
+            if n%i==0:
+                print(n,'không là số nguyên tố')
+                break
+        else:
+            print(n,'là số nguyên tố')
+    else:
+        print(n,'không là số nguyên tố')
+''' bài 38'''
+def bai38():
+    demolist=[]
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< elementn:
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        i+=1
+    print(demolist)
+''' bài 39'''
+def bai39():
+    demolist=[]
+    reversedlist=[]
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< elementn:
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        i+=1
+    print('list: ',demolist)
+    for i in range(1, len(demolist)+1):
+        reversedlist.append(demolist[len(demolist) - i])
+    print('REVERSED LIST: ',reversedlist)
+''' bài 40'''
+def bai40():
+    demolist=[]
+    listsum=0
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< elementn:
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        listsum=listsum+int(demolist[i])
+        i+=1
+    print('sum of list: ', listsum)
+''' bài 41'''
+def bai41():
+    demolist=[]
+    i=0
+    maxelist = [0]
+    minnum=0
+    a=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< int(elementn):
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        i+=1
+    # sắp xếp list theo thuật toán buble sort
+    for i in range(len(demolist)):
+            for j in range(len(demolist)-i-1):
+                if int(demolist[j]) > int(demolist[j+1]):
+                    demolist[j], demolist[j+1] = demolist[j+1], demolist[j]
+    print('max : ', demolist[-1]) # list đã được sắp xếp có phần tử lớn nhất nằm cuối với số chỉ thị là -1 
+    print('min : ', demolist[0]) # số chỉ thị của phần tử đầu tiên của list là 0 == số nhỏ nhất sau khi sắp xếp
+''' bài 42 '''
+def bai42():
+    demolist=[]
+    sodd=[]
+    seven=[]
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< int(elementn):
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        if int(demolist[i]) %2 ==0 :
+            sodd.append(demolist[i])
+        elif int(demolist[i]) %2 !=0 :
+            seven.append(demolist[i])
+        i+=1
+    print('Odd list : ',sodd)
+    print('Even list: ',seven)
+
+
+print('bài tập đã làm 1-44')
 def thucthiham():
-    tenham = input('nhập bài tập muốn chạy vd: bai27:')
+    tenham = input('nhập bài tập muốn chạy vd:bai27\nbài tập muốn chạy:')
     if tenham in globals():
         ham=globals()[tenham]
         ham()
