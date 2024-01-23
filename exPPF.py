@@ -406,8 +406,38 @@ def bai42():
         i+=1
     print('Odd list : ',sodd)
     print('Even list: ',seven)
-
-
+''' bài 43'''
+def bai43():
+    demolist=[]
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< int(elementn):
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        i+=1
+    print('LIST :',demolist)
+    # sắp xếp list theo thuật toán buble sort
+    for i in range(len(demolist)):
+            for j in range(len(demolist)-i-1):
+                if int(demolist[j]) > int(demolist[j+1]):
+                    demolist[j], demolist[j+1] = demolist[j+1], demolist[j]
+    print('Sorted list : ',demolist)
+''' bài 44'''
+def bai44():
+    demolist=[]
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< int(elementn):
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        i+=1
+    print('LIST :',demolist)
+    # sắp xếp list theo thuật toán buble sort
+    for i in range(len(demolist)):
+            for j in range(len(demolist)-i-1):
+                if int(demolist[j]) > int(demolist[j+1]):
+                    demolist[j], demolist[j+1] = demolist[j+1], demolist[j]
+    print('Sorted list : ',demolist[::-1])
 print('bài tập đã làm 1-44')
 def thucthiham():
     tenham = input('nhập bài tập muốn chạy vd:bai27\nbài tập muốn chạy:')
