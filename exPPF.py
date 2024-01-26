@@ -438,7 +438,12 @@ def bai44():
                 if int(demolist[j]) > int(demolist[j+1]):
                     demolist[j], demolist[j+1] = demolist[j+1], demolist[j]
     print('Sorted list : ',demolist[::-1])
-print('bài tập đã làm 1-44')
+''' bài 45'''
+def bai45():
+    stringin = input('input the string: ')
+    print('reverse string: ',stringin[::-1])
+''' bài 46'''
+print('bài tập đã làm 1-50')
 def thucthiham():
     tenham = input('nhập bài tập muốn chạy vd:bai27\nbài tập muốn chạy:')
     if tenham in globals():
