@@ -487,6 +487,10 @@ def bai49():
         count=count+1
     print('number of words: ',count)
 ''' bài 50'''
+def bai50():
+    #Write a Python function manage employees (EmployeeID, EmployeeName, DateOfBirth, Email, Phone, Salary) include functions: add new, search by name, remove, update, and print a list of employees by descending salary.
+    
+    print('bài tập chưa làm')
 print('bài tập đã làm 1-50')
 def thucthiham():
     tenham = input('nhập bài tập muốn chạy vd:bai27\nbài tập muốn chạy:')
