@@ -24,3 +24,10 @@ def bai4():
         print('kết quả là :', a/b)
     else:
         print('nhập sai phép tính')
+def main():
+    bai1()
+    bai2()
+    bai3()
+    bai4()
+if __name__ == "__main__":
+    main()
