@@ -443,6 +443,50 @@ def bai45():
     stringin = input('input the string: ')
     print('reverse string: ',stringin[::-1])
 ''' bài 46'''
+def bai46():
+    stringin = input('input the string: ')
+    count=0
+    for i in stringin:
+        if i.isalnum()==False:
+            count=count+1
+    print('number of special characters: ',count)
+''' bài 47'''
+def bai47():
+    #Write a Python program to input a list of item names and print the list with the item names
+    #sorted in ascending order
+    demolist=[]
+    i=0
+    elementn = int(input('nhập vào số phần tử của mảng:'))
+    while i< int(elementn):
+        element = input('nhập vào phần tử của mảng:\n')
+        demolist.append(element)
+        i+=1
+    print('LIST :',demolist)
+    # sắp xếp list theo thuật toán buble sort áp dụng cho độ dài của phần tử trong list
+    for i in range(len(demolist)):
+            for j in range(len(demolist)-i-1):
+                if int(len(demolist[j])) > int(len(demolist[j+1])):
+                    demolist[j], demolist[j+1] = demolist[j+1], demolist[j]
+    print('Sorted list : ',demolist)
+''' bài 48'''
+def bai48():
+    stringin = input('input the string: ')
+    count=0
+    for i in stringin:
+        if i==' ':
+            count=count+1
+    print('number of words: ',count+1)
+''' bài 49'''
+def bai49():
+    filename=input('input the file name: ')
+    file=open(filename,'r')
+    filecontent=file.read()
+    filelist=filecontent.split()
+    count=0
+    for i in filelist:
+        count=count+1
+    print('number of words: ',count)
+''' bài 50'''
 print('bài tập đã làm 1-50')
 def thucthiham():
     tenham = input('nhập bài tập muốn chạy vd:bai27\nbài tập muốn chạy:')
