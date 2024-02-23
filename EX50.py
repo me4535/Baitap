@@ -20,9 +20,6 @@ def searcheremployee():
             if search in line:
                 print(line)
                 return True
-            else:
-                print('not found')
-                return False
 # function to delete a employee 
 def deleteemployee():
     search = input('Enter name: ')
